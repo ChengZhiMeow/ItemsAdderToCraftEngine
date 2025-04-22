@@ -1,0 +1,17 @@
+author: BaiShenYao_Dog
+version: 1.0.0
+
+defaultLootTable: default:loot_table/basic
+
+configFolderNameList:
+  - config
+  - configs
+  - items_packs
+
+resourceFolderNameList:
+  - resourcepack
+  - resource_pack
+  - assets
+
+overwriteLang:
+  - all
