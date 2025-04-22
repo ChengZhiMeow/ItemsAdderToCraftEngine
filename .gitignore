@@ -7,6 +7,9 @@ out/
 
 *.zip
 
+font_images_unicode_cache.yml
+items_ids_cache.yml
+
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
