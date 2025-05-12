@@ -1,17 +1,40 @@
-author: BaiShenYao_Dog
-version: 1.0.0
+# 包信息
+packInfo:
+  # 作者
+  author: BaiShenYao_Dog
+  # 版本
+  version: 1.0.0
 
+# 相对坐标
+position:
+  x: "0"
+  y: "{height} - 0.5"
+  z: "0"
+
+# 平移变换
+translation:
+  x: "0"
+  y: "0"
+  z: "0"
+
+# 坐高
+sitHeight: "-1 * ({height} - 1)"
+
+# 默认掉落物表
 defaultLootTable: default:loot_table/basic
 
+# 处理的配置文件夹目录
 configFolderNameList:
   - config
   - configs
   - items_packs
 
+# 处理的资源文件夹目录
 resourceFolderNameList:
   - resourcepack
   - resource_pack
   - assets
 
-overwriteLang:
+# 覆盖MC语言
+overwriteAllLang:
   - all

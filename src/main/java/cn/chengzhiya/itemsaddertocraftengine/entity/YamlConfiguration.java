@@ -1,4 +1,4 @@
-package cn.chengzhiya;
+package cn.chengzhiya.itemsaddertocraftengine.entity;
 
 import lombok.Data;
 import org.yaml.snakeyaml.DumperOptions;
