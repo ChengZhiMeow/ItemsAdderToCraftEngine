@@ -21,7 +21,11 @@ translation:
 sitHeight: "-1 * ({height} - 1)"
 
 # 默认掉落物表
-defaultLootTable: default:loot_table/basic
+lootTable:
+  # 基础
+  basic: default:loot_table/basic
+  # 家具
+  furniture: default:loot_table/furniture
 
 # 处理的配置文件夹目录
 configFolderNameList:
