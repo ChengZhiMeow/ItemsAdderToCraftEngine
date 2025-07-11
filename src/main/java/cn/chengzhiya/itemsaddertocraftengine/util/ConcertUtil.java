@@ -89,7 +89,7 @@ public final class ConcertUtil {
                             for (String i18n : getNamespaceLangHashMap().keySet()) {
                                 displayName = displayName.replace(i18n, "<i18n:" + i18n + ">");
                             }
-                            out.set("items." + namespace + ":" + key + ".data.display-name", displayName);
+                            out.set("items." + namespace + ":" + key + ".data.display-name", ColorUtil.legacyColor(displayName));
                         }
 
                         List<String> lore = item.getStringList("lore");
@@ -100,7 +100,7 @@ public final class ConcertUtil {
                                             s = s.replace(i18n, "<i18n:" + i18n + ">");
                                         }
 
-                                        return s;
+                                        return ColorUtil.legacyColor(s);
                                     })
                                     .toList()
                             );
