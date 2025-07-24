@@ -89,7 +89,7 @@ public final class ConcertUtil {
                             for (String i18n : getNamespaceLangHashMap().keySet()) {
                                 displayName = displayName.replace(i18n, "<i18n:" + i18n + ">");
                             }
-                            out.set("items." + namespace + ":" + key + ".data.display-name", ColorUtil.legacyColor(displayName));
+                            out.set("items." + namespace + ":" + key + ".data.display-name", "<!i>" + ColorUtil.legacyColor(displayName));
                         }
 
                         List<String> lore = item.getStringList("lore");
@@ -100,7 +100,7 @@ public final class ConcertUtil {
                                             s = s.replace(i18n, "<i18n:" + i18n + ">");
                                         }
 
-                                        return ColorUtil.legacyColor(s);
+                                        return "<!i>" + ColorUtil.legacyColor(s);
                                     })
                                     .toList()
                             );
@@ -141,10 +141,12 @@ public final class ConcertUtil {
                         {
                             out.set("items." + namespace + ":" + key + ".behavior.type", "block_item");
 
+                            out.set("items." + namespace + ":" + key + ".behavior.block.settings.item", namespace + ":" + key);
+                        }
+
+                        if (!item.getBoolean("specific_properties.block.cancel_drop")) {
                             out.set("items." + namespace + ":" + key + ".behavior.block.loot.template", ConfigUtil.getConfig().getString("lootTable.basic"));
                             out.set("items." + namespace + ":" + key + ".behavior.block.loot.arguments.item", namespace + ":" + key);
-
-                            out.set("items." + namespace + ":" + key + ".behavior.block.settings.item", namespace + ":" + key);
                         }
 
                         // 音效
@@ -197,8 +199,8 @@ public final class ConcertUtil {
                             out.set("items." + namespace + ":" + key + ".behavior.type", "furniture_item");
                             out.set("items." + namespace + ":" + key + ".behavior.furniture.settings.item", namespace + ":" + key);
 
-                            out.set("items." + namespace + ":" + key + ".behavior.block.loot.template", ConfigUtil.getConfig().getString("lootTable.furniture"));
-                            out.set("items." + namespace + ":" + key + ".behavior.block.loot.arguments.item", namespace + ":" + key);
+                            out.set("items." + namespace + ":" + key + ".behavior.furniture.placement.loot.template", ConfigUtil.getConfig().getString("lootTable.furniture"));
+                            out.set("items." + namespace + ":" + key + ".behavior.furniture.placement.loot.arguments.item", namespace + ":" + key);
 
                             out.set("items." + namespace + ":" + key + ".behavior.furniture.placement.ground.rules.rotation", "ANY");
                             out.set("items." + namespace + ":" + key + ".behavior.furniture.placement.ground.rules.alignment", "CENTER");
