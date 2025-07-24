@@ -199,8 +199,8 @@ public final class ConcertUtil {
                             out.set("items." + namespace + ":" + key + ".behavior.type", "furniture_item");
                             out.set("items." + namespace + ":" + key + ".behavior.furniture.settings.item", namespace + ":" + key);
 
-                            out.set("items." + namespace + ":" + key + ".behavior.furniture.placement.loot.template", ConfigUtil.getConfig().getString("lootTable.furniture"));
-                            out.set("items." + namespace + ":" + key + ".behavior.furniture.placement.loot.arguments.item", namespace + ":" + key);
+                            out.set("items." + namespace + ":" + key + ".behavior.furniture.loot.template", ConfigUtil.getConfig().getString("lootTable.furniture"));
+                            out.set("items." + namespace + ":" + key + ".behavior.furniture.loot.arguments.item", namespace + ":" + key);
 
                             out.set("items." + namespace + ":" + key + ".behavior.furniture.placement.ground.rules.rotation", "ANY");
                             out.set("items." + namespace + ":" + key + ".behavior.furniture.placement.ground.rules.alignment", "CENTER");
